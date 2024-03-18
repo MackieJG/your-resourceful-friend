@@ -12,7 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export function ResourceCard({ resource }) {
+export function ResourceCard({ resource }: any) {
   return (
     <a href={resource.link} target="_blank">
       <Card className="w-[260px] group hover:shadow-md transition-shadow duration-300 overflow-hidden">

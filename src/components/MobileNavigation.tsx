@@ -11,13 +11,12 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { googleFormLink } from "./Navigation";
 
-export default function MobileDrawer({ categories }) {
+export default function MobileDrawer({ categories }: any) {
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleButton = (link: string) => {
-    console.log(link);
     setIsOpen(false);
     router.push(link);
   };
@@ -34,7 +33,7 @@ export default function MobileDrawer({ categories }) {
           <div className="flex flex-1 items-center">
             <ul className="flex flex-1 flex-col gap-2 py-6">
               {categories &&
-                categories.map((value, index) => {
+                categories.map((value: any, index: number) => {
                   return (
                     <li key={index} className="flex flex-1">
                       <Button

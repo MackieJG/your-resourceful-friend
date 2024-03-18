@@ -4,7 +4,7 @@ import MobileNavigation from "@/components/MobileNavigation";
 
 export const googleFormLink =
   "https://docs.google.com/forms/d/e/1FAIpQLSdG3EZWq1jFut0jkrsugBLZrDD8p5yxBdeqpiusLCQCBiJCjw/viewform";
-export default function NavBar({ categories }) {
+export default function NavBar({ categories }: any) {
   return (
     <header className="flex py-4 items-center gap-8 justify-between">
       <h1 className="">Junior Dev Resources</h1>

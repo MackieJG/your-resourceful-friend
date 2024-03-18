@@ -9,7 +9,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   const [resources, setResources] = useState([]);
 
   async function getResources(CategoryId: number) {
-    let { data: Resources, error } = await supabase
+    let { data: Resources, error }: any = await supabase
       .from("Resources")
       .select("*, Resources_Categories!inner(category_id)")
       .eq("Resources_Categories.category_id", CategoryId);
@@ -21,7 +21,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   }
 
   const getCategoryId = async () => {
-    let { data: Category, error } = await supabase
+    let { data: Category, error }: any = await supabase
       .from("Categories")
       .select("id")
       .eq("slug", params.slug);
