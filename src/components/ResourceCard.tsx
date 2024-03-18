@@ -23,7 +23,7 @@ export function ResourceCard({ resource }: any) {
                 ? resource.image_url
                 : "https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             }
-            className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110 transform-gpu"
+            className="object-cover object-center h-full w-full transition-transform duration-700 ease-in-out group-hover:scale-110 transform-gpu"
             alt={`cover image for ${resource.title}`}
           />
         </div>
