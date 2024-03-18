@@ -2,26 +2,37 @@
 
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/supabase";
-import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const router = useRouter();
+
+  const [categories, setCategories] = useState<any>();
+
   const getAllCategories = async () => {
-    let { data: Category, error } = await supabase.from("Category").select("*");
+    let { data: Categories, error }: any = await supabase
+      .from("Categories")
+      .select("*");
     if (error) {
-      return error;
+      setCategories(undefined);
     }
-    console.log(Category);
-    return Category;
+    setCategories(Categories);
   };
 
   useEffect(() => {
     getAllCategories();
   }, []);
 
+  useEffect(() => {
+    if (categories) {
+      router.push(categories[0].slug);
+    }
+  }, [categories]);
+
   return (
     <>
-      <h1 className="underline text-red-600">Hello World</h1>
-      <Button>Button</Button>
+      <h1>Loading...</h1>
     </>
   );
 }
