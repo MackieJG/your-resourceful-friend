@@ -1,17 +1,14 @@
 "use client";
 
 // import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
-
+import { inter } from "./fonts";
 import "./globals.css";
 import { supabase } from "@/supabase";
 import Sidebar from "@/components/Sidebar";
 import NavBar from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import { useEffect, useState } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
