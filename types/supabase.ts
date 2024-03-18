@@ -1,17 +1,3 @@
-[?25l
-    Select a project:                                                                                     
-                                                                                                          
-  >  1. affjvnngexshpxxlqynm [name: your-resourceful-friend, org: rogoiiztiqfyktmtauaq, region: eu-west-2]
-                                                                                                          
-                                                                                                          
-    ↑/k up • ↓/j down • / filter • q quit • ? more                                                        
-                                                                                                          [0D[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[0D[2K [0D[2K[?25h[?1002l[?1003l[?1006lexport type Json =
-  | string
-  | number
-  | boolean
-  | null
-  | { [key: string]: Json | undefined }
-  | Json[]
 
 export type Database = {
   public: {
