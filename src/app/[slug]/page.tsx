@@ -1,5 +1,5 @@
 "use client";
-
+export const runtime = "edge";
 import { ResourceCard } from "@/components/ResourceCard";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/supabase";
