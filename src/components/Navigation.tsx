@@ -5,7 +5,7 @@ import Logo from "./Logo";
 import { useTheme } from "next-themes";
 
 export const googleFormLink =
-  "https://docs.google.com/forms/d/e/1FAIpQLSdG3EZWq1jFut0jkrsugBLZrDD8p5yxBdeqpiusLCQCBiJCjw/viewform";
+  "https://docs.google.com/forms/d/e/1FAIpQLSdG3EZWq1jFut0jkrsugBLZrDD8p5yxBdeqpiusLCQCBiJCjw/viewform?usp=sf_link";
 export default function NavBar({ categories }: any) {
   const { theme, setTheme } = useTheme();
   return (
