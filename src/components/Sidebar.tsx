@@ -10,7 +10,7 @@ type SidebarProps = {
   categories: Category[];
 };
 
-type Category = {
+export type Category = {
   id: number;
   title: string;
   slug: string;
