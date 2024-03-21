@@ -17,7 +17,6 @@ export type Category = {
 };
 
 export default function Sidebar({ categories }: SidebarProps) {
-  console.log(categories);
   const pathname = usePathname();
   return (
     <aside className="hidden sm:block p-4 rounded-md bg-secondary min-w-[240px]">
