@@ -28,7 +28,7 @@ type Resource = {
 export function ResourceCard({ resource }: ResourceCardProps) {
   return (
     <a href={resource.link} target="_blank">
-      <Card className="w-[260px] group hover:shadow-md transition-shadow duration-300 overflow-hidden min-h-96">
+      <Card className="w-[260px] group hover:shadow-md transition-shadow duration-300 overflow-hidden min-h-[294px]">
         <div className="h-40 overflow-hidden">
           <img
             src={
