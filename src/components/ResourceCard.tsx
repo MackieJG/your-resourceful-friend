@@ -11,11 +11,24 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Database } from "../../types/supabase";
 
-export function ResourceCard({ resource }: any) {
+type ResourceCardProps = {
+  resource: Resource;
+};
+
+type Resource = {
+  id: number;
+  title: string;
+  link: string;
+  image_url: string;
+  description: string;
+};
+
+export function ResourceCard({ resource }: ResourceCardProps) {
   return (
     <a href={resource.link} target="_blank">
-      <Card className="w-[260px] group hover:shadow-md transition-shadow duration-300 overflow-hidden">
+      <Card className="w-[260px] group hover:shadow-md transition-shadow duration-300 overflow-hidden min-h-96">
         <div className="h-40 overflow-hidden">
           <img
             src={

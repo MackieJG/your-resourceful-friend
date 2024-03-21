@@ -6,13 +6,24 @@ import { Database, Tables } from "../../types/supabase";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function Sidebar({ categories }: any) {
+type SidebarProps = {
+  categories: Category[];
+};
+
+type Category = {
+  id: number;
+  title: string;
+  slug: string;
+};
+
+export default function Sidebar({ categories }: SidebarProps) {
+  console.log(categories);
   const pathname = usePathname();
   return (
     <aside className="hidden sm:block p-4 rounded-md bg-secondary min-w-[240px]">
       <ul className="space-y-2">
         {categories ? (
-          categories.map((category: any, index: number) => {
+          categories.map((category: Category, index: number) => {
             return (
               <li key={index} className="flex">
                 <Link

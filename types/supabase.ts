@@ -6,14 +6,17 @@ export type Database = {
         Row: {
           id: number
           title: string
+          slug: string
         }
         Insert: {
           id?: number
           title: string
+          slug: string
         }
         Update: {
           id?: number
           title?: string
+          slug?: string
         }
         Relationships: []
       }
