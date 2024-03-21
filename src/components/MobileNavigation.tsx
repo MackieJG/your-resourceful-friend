@@ -10,8 +10,13 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { googleFormLink } from "./Navigation";
+import { Category } from "./Sidebar";
 
-export default function MobileDrawer({ categories }: any) {
+type MobileNavigationProps = {
+  categories: Category[];
+};
+
+export default function MobileDrawer({ categories }: MobileNavigationProps) {
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +38,7 @@ export default function MobileDrawer({ categories }: any) {
           <div className="flex flex-1 items-center">
             <ul className="flex flex-1 flex-col gap-2 py-6">
               {categories &&
-                categories.map((value: any, index: number) => {
+                categories.map((value: Category, index: number) => {
                   return (
                     <li key={index} className="flex flex-1">
                       <Button
