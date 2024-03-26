@@ -31,6 +31,8 @@ Junior Dev Resources is a collection of useful resources for junior developers t
 
 You can view a live version of Junior Dev Resources at: https://www.juniordevresources.com
 
+<img align="center" src="https://ccaybraoducxcvwwkwkr.supabase.co/storage/v1/object/sign/Images/Portfolio_mockup.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJbWFnZXMvUG9ydGZvbGlvX21vY2t1cC5qcGciLCJpYXQiOjE3MTE0NDQ5OTksImV4cCI6MjAyNjgwNDk5OX0.6zmdYQHau-45Vbml2KC5e_hpn2l9hfTRkUknbIHXYO8&t=2024-03-26T09%3A23%3A21.207Z" alt="Junior Dev Resources Landing Page">
+
 <!-- BRIEF -->
 ### MVP
 
