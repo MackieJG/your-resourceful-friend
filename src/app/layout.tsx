@@ -20,22 +20,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [categories, setCategories] = useState<any>();
-
-  const getAllCategories = async () => {
-    let { data: Categories, error }: any = await supabase
-      .from("Categories")
-      .select("*");
-    if (error) {
-      setCategories(undefined);
-    }
-    setCategories(Categories);
-  };
-
-  useEffect(() => {
-    getAllCategories();
-  }, []);
-
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -44,16 +28,10 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange>
-          <div className="container min-h-screen">
-            <NavBar categories={categories} />
-            <main>
-              <Hero />
-              <section className="flex gap-4">
-                <Sidebar categories={categories} />
-                <div className="flex-1">{children}</div>
-              </section>
-            </main>
-          </div>
+          <main className="container min-h-screen flex flex-col">
+            <NavBar />
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

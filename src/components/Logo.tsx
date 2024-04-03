@@ -17,8 +17,8 @@ return (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 968 160"
-    width={363}
-    height={60}
+    // width={363}
+    // height={60}
     fill="none">
     <path
       fill={resolvedTheme === "dark" ? "#fafaf9" : "#0b0a09"}
