@@ -10,7 +10,7 @@ interface ProjectDataProps {
 }
 
 const ProjectGenerator = () => {
-  const apiUrl = "http://localhost:8080";
+  const apiUrl = "https://hello-python.joshuamackie10.workers.dev";
   const [projectData, setProjectData] = useState<ProjectDataProps | null>(null);
 
   useEffect(() => {
