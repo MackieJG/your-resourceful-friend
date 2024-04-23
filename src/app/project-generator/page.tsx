@@ -11,9 +11,10 @@ interface ProjectDataProps {
 
 const ProjectGenerator = () => {
   const apiUrl = "https://hello-python.joshuamackie10.workers.dev";
+
   const [projectData, setProjectData] = useState<ProjectDataProps | null>(null);
 
-  useEffect(() => {
+  const fetchData = () => {
     fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
@@ -27,11 +28,15 @@ const ProjectGenerator = () => {
       .catch((error) => {
         console.error("Error:", error);
       });
+  };
+
+  useEffect(() => {
+    fetchData();
   }, []);
 
   return (
     <div className="flex flex-1 items-center justify-center text-center flex-col gap-11">
-      <Button>
+      <Button onClick={fetchData}>
         <Dices className="mr-2 h-4 w-4" /> Generate
       </Button>
       <h1 className="text-4xl md:text-7xl font-bold">
