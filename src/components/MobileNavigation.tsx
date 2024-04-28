@@ -53,6 +53,12 @@ export default function MobileDrawer({ categories }: MobileNavigationProps) {
                   );
                 })}
               <a
+                href="project-generator"
+                target="_blank"
+                className={buttonVariants({ variant: "outline" })}>
+                Project Generator
+              </a>
+              <a
                 href={googleFormLink}
                 target="_blank"
                 className={buttonVariants({ variant: "secondary" })}>
